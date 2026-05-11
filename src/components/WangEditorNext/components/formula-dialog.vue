@@ -25,6 +25,7 @@ let editorRef = null as unknown as IDomEditor;
 const btn = ref()
 const src = ref()
 const initLatex = ref('')
+const base = import.meta.env.BASE_URL
 const openDialog = (editor: IDomEditor) => {
   const fragment = editor.getFragment() as any
 		if (fragment[0]?.type === 'table' && fragment[0]?.children[0]?.type === 'table-row' && fragment[0]?.children[0]?.children[0]?.type === 'table-cell' && fragment[0]?.children[0]?.children[0]?.children[0]?.type === 'formula') {
@@ -34,8 +35,8 @@ const openDialog = (editor: IDomEditor) => {
     }
   editorRef = editor;
   src.value = initLatex.value
-    ? `/cdn/kityformula/kityformula/index.html?latex=${encodeURIComponent(initLatex.value)}`
-    : '/cdn/kityformula/kityformula/index.html';
+    ? `${base}cdn/kityformula/kityformula/index.html?latex=${encodeURIComponent(initLatex.value)}`
+    : `${base}cdn/kityformula/kityformula/index.html`;
   dialogVisible.value = true;
 };
 
