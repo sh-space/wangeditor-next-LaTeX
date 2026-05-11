@@ -80,6 +80,8 @@ interface UploadEmits {
 }
 const emit = defineEmits<UploadEmits>();
 
+const editUploadTypeMap = { oss: 'oss', sysFile: 'sysFile' } as const;
+
 
 const editorRef = shallowRef()
 const toolbarConfig: Partial<IToolbarConfig> = {
@@ -285,8 +287,12 @@ watch(() => props.disabled, (newValue) => {
 }, { immediate: true })
 
 const loading = ref(false)
-const uploadActionHandle = async () => {
-  
+const uploadActionHandle = async (_file: File, _path: string) => {
+  return ''
+}
+
+const request = async (_opts: any) => {
+  return { data: { url: '' } }
 }
 
 // 组件销毁时，也及时销毁编辑器

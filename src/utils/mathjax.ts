@@ -1,7 +1,8 @@
 export function configureMathJax() {
-  if (!window.MathJax) return;
+  const w = window as any
+  if (!w.MathJax) return;
 
-  window.MathJax.Hub.Config({
+  w.MathJax.Hub.Config({
     extensions: ['tex2jax.js', '[tex]/color','[tex]/_', '[tex]/textcolor'],
     //  extensions: [
     //   'tex2jax.js',

@@ -36,7 +36,7 @@ watch(
   () => form.value.latex,
   (val) => {
     if (val.includes('$')) {
-      val = val.replaceAll('$', '');
+      val = val.replace(/\$/g, '');
       form.value.latex = val
     } 
     form.value.content = `<span data-w-e-type=\"formula\" data-w-e-is-void data-w-e-is-inline data-value="${val}"></span>`
