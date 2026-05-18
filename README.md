@@ -5,10 +5,7 @@
 
 **在线演示：[https://sh-space.github.io/wangeditor-next-LaTeX/](https://sh-space.github.io/wangeditor-next-LaTeX/)**
 
-###### 功能咨询 1223126874@qq.com
-
 ## 演示截图
-# 用得上的希望给个 Star !
 
 **编辑器界面**
 
